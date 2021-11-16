@@ -14,7 +14,6 @@ if (isset($_POST['_IS_POST_BACK_'])) {
   $post_id          = $_POST['id'];
   $post_state       = $_POST['state'];
   $post_title       = trim($_POST['title']);
-  $post_content     = get_magic_quotes_gpc() ? stripslashes(trim($_POST['content'])) : trim($_POST['content']);
   if ($_POST['tags'] != '在此输入标签，多个标签用英语逗号(,)分隔')
     $post_tags      = explode(',', trim($_POST['tags']));
   $post_date        = date("Y-m-d");

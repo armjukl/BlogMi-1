@@ -8,7 +8,6 @@ if (isset($_POST['save'])) {
   $mc_config['site_link'] = $_POST['site_link'];
   $mc_config['user_nick'] = $_POST['user_nick'];
   $mc_config['user_name'] = $_POST['user_name'];
-  $mc_config['comment_code'] = get_magic_quotes_gpc() ? stripslashes(trim($_POST['comment_code'])) : trim($_POST['comment_code']);
   if ($_POST['user_pass'] != '')
     $mc_config['user_pass'] = $_POST['user_pass'];
     $code = "<?php\n\$mc_config = ".var_export($mc_config, true)."\n?>";
